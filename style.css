@@ -1,0 +1,95 @@
+*, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    background: lightcyan;
+}
+.navigation-header {
+    width: 100%;
+    height: 120px;
+    margin: auto;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 16px;
+    position: sticky;
+    top: 0;
+}
+.navigation {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-logo {
+    width: 30%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.nav-menu {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+}
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
+}
+.nav-menu ul li a {
+    text-decoration: none;
+    color: black;
+}
+.nav-list-btn {
+    padding: 15px 20px;
+    border-radius: 100px;
+    color: white;
+    font-weight: 600;
+    transition: .3s ease-in-out;
+    background: dodgerblue;
+    text-decoration: none;
+}
+.nav-list-btn:hover {
+    box-shadow: 0px 0px 20px lightgrey;
+}
+
+.nav-menu ul > li > a.active {
+    color: dodgerblue;
+    font-weight: 600;
+}
+
+.hamburger, .close-hamburger {
+    display: none;
+    font-size: 25px;
+}
+
+@media screen and (max-width: 1024px) {
+    .hamburger {
+        display: block;
+    }
+    .nav-list {
+        position: absolute;
+        left: 0;
+        margin: auto;
+        width: 100%;
+        height: fit-content;
+        padding: 30px 16px;
+        background: white;
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        justify-content: none;
+        display: none;
+    } 
+}
